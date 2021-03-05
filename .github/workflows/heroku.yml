@@ -28,11 +28,11 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-lastest, windows-latest, macos-latest]
-        node-version: [12.x, 14.x]
+        node-version: [12.x]
         exclude:
-      # excludes node 4 on macOS
+      # excludes macOS
         - os: macos-latest
-          node: 14
+
 
     steps:
       - uses: actions/checkout@v1
