@@ -10,7 +10,7 @@ on:
       
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest, windows-latest
 
     steps:
       - uses: actions/checkout@v1
@@ -23,7 +23,7 @@ jobs:
           name: webpack artifacts
           path: dist/devops/
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest, windows-latest
     needs: build
     strategy:
       matrix:
